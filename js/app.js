@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const counter = document.getElementById("counter");
     const addPieceButton = document.getElementById("addPiece");
     const clearScoreButton = document.getElementById('clearScore');
+    const sushiImage = document.getElementById('sushiImage');
 
     let count = parseInt(localStorage.getItem("sushiCount")) || 0;
     counter.innerText = count;
@@ -18,6 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         counter.classList.add("pop");
         setTimeout(() => counter.classList.remove("pop"), 200);
+
+        // Trigger sushi image animation
+        sushiImage.classList.add('animate');
+        setTimeout(() => sushiImage.classList.remove('animate'), 300); // Adjust timing as needed
     })
 
     clearScoreButton.addEventListener('click', () => {

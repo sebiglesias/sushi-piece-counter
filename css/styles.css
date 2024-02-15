@@ -85,3 +85,7 @@ button:active {
     box-shadow: 0 2px #2980b9;
     transform: translateY(2px);
 }
+
+.animate {
+    animation: pop 0.3s ease;
+}
