@@ -69,3 +69,19 @@ button:active {
     display: inline-block;
     animation: pop 0.2s ease;
 }
+
+.clear-btn {
+    margin-top: 20px;
+    background-color: #3498db; /* Blue */
+    box-shadow: 0 4px #2980b9; /* Slightly darker blue for shadow */
+}
+
+.clear-btn:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+.clear-btn:active {
+    background-color: #2980b9;
+    box-shadow: 0 2px #2980b9;
+    transform: translateY(2px);
+}
