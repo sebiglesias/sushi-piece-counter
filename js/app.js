@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const counter = document.getElementById("counter");
     const addPieceButton = document.getElementById("addPiece");
+    const clearScoreButton = document.getElementById('clearScore');
 
     let count = parseInt(localStorage.getItem("sushiCount")) || 0;
     counter.innerText = count;
@@ -17,5 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         counter.classList.add("pop");
         setTimeout(() => counter.classList.remove("pop"), 200);
+    })
+
+    clearScoreButton.addEventListener('click', () => {
+        count = 0; // Reset count
+        localStorage.setItem('sushiCount', count); // Update localStorage
+        counter.innerText = count; // Update display
     });
 });
